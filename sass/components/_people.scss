@@ -1,0 +1,94 @@
+.people {
+  background: #f5f4fa;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.people__hero {
+  @include font(null, 28px, 1.17, 0.03em);
+  text-align: center;
+  color: var(--grey-color);
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+font-size: 36px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+    .people__hero{
+  margin-bottom: 30px;
+  }
+  }
+
+.people__list {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+}
+
+.people__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.people__card {
+  background: var(--white-color);
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.people__name {
+  @include font(500, 16px, 1.18, 0.03em);
+  color: var(--grey-color);
+  margin-bottom: 10px;
+}
+
+.people__work {
+  @include font(null, 16px, 1.18, 0.03em);
+  color: var(--main-clor);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.people__soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+  display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus{
+  color: var(--white-color);
+  background-color: var(--footer-color);
+}
+}
+
+.people__soc-icon {
+  fill: currentColor;
+}
+
+.people__soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
